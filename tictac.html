@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color:#38598b;
+            }
+           .main{
+            height:600px;
+            width: 700px;
+            margin-top:-30px;
+            margin-left: 490px;
+               }
+           .first{
+            height:165px;
+            width:500px;
+            display: flex;
+            margin-top:45px;
+            margin-left:7px;
+           }
+           .print{
+            height:165px;
+            width: 200px;
+            display: flex;
+            border:1px #38598b;
+            font-size: 80px;
+            margin-top:10px;
+            margin-left:10px;
+            color:rebeccapurple;
+            background-color:#a2a8d3;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow:1px 3px 1px #e7eaf6;
+           }
+        .text{
+            height:90px;
+            width:500px;
+            text-align: center;
+            font-size: 80px;
+            color:#e7eaf6;
+            margin-left:500px;
+            text-shadow: 2px 2px 9px blueviolet;
+               } 
+              .result{
+                height:20px;
+                width:50px;
+                margin-left:650px;
+               }
+          </style>
+          <title>
+             tictac
+          </title>
+          <script src="jquery.js"></script>
+          <script>
+            //this for auto or one player
+          /*  $(document).ready(function(){
+                $(".print").click(function(){
+                    $(this).text("X");
+                    $(".print").not(this).each(function(){
+                        if ($(this).text() == "") { 
+                                    $(this).text("O"); 
+                                    return false;
+                                    } 
+                    });
+             }); 
+         }); */
+         //this for two player
+        $(document).ready(function(){
+            let currentPlayer = "X";
+            $(".print").click(function(){
+                if ($(this).text() == "") {
+                    $(this).text(currentPlayer);
+                    currentPlayer = currentPlayer === "X"? "O" : "X";
+                }
+            });
+        }); 
+          </script>           
+      </head>
+        <body>
+              <div class="text">Tic Tac Toe</div>
+             <div class="main">
+                  <div class="first">
+                     <div class="print"></div>
+                     <div class="print"></div>
+                     <div class="print"></div>
+                 </div>
+                 <div class="first">
+                    <div class="print"></div>
+                     <div class="print"></div>
+                     <div class="print"></div>
+                 </div>
+                 <div class="first">
+                    <div class="print"></div>
+                     <div class="print"></div>
+                     <div class="print"></div>
+                 </div>
+                 <div class="result"></div>
+             </div>
+        </body>
+</html>
