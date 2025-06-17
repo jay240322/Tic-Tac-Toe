@@ -1,2 +1,2 @@
-# Tic-Tac-Toe
-Tic-Tac-Toe game using Html,css,js
+Tic-Tac-Toe
+Welcome to the Tic-Tac-Toe game! This is a simple implementation of the classic Tic-Tac-Toe game using HTML, CSS, and JavaScript. You can play against another player in a fun and interactive way.
