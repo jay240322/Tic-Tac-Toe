@@ -39,8 +39,3 @@ This is a simple Tic-Tac-Toe game implemented using **HTML**, **CSS**, and **Jav
     cd TIC-TAC-TOE
     ```
 
-3.  **Open in Your Browser:**
-    Simply open the `index.html` file in your preferred web browser. You can usually do this by double-clicking the file, or by right-clicking and choosing "Open with" and selecting your browser.
-
-    Once opened, the Tic-Tac-Toe game board will appear, ready for you and a friend to play!
-EOF
