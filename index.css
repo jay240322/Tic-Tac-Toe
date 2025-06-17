@@ -1,0 +1,144 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  margin-top: 20px;
+  margin-left: 80vw;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  /* margin-top: 10px; */
+  background: #9fccfa;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #0974f1;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
+}
+.board{
+    height: 30vw;
+    width: 33vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.layout{
+    height: 33vw;
+    width: 50vw;
+    margin-top:5%;
+    margin-left: 150px;
+    margin-bottom:auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 7vw;
+}
+.reset{
+    height: 7vh;
+    width: 20vh;
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 4px;
+    background-color: blue;
+     &:hover{
+        cursor: pointer;
+     }
+}
+button{
+    height:10vw;
+    width: 10vw;
+    border: 2px solid black;
+    font-size: 50px;
+    color: white;
+    background-color: white;
+}
+.winner{
+    height:31vw;
+    width:31vw;
+    font-size: 50px;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    align-content: center;
+    margin-top: -470px;
+    display: none;
+    z-index: 1;
+}
+@media only screen and (max-width: 400px) {
+   .layout{
+    display: block;
+   }
+   .reset{
+    margin-left:-50px;
+    margin-top: 40px;
+   }
+   .board{
+    height:75vw;
+    width: 80vw;
+    margin-left: -120px;
+    margin-top: 100px;
+   }
+   button{
+    height: 25vw;
+    width: 25vw;
+   }
+   .winner{
+    height:80vw;
+    width: 80vw;
+    margin-top: -300px;
+   }
+}
